@@ -4,32 +4,47 @@ void registerAccount();
 void login();
 void getOption(int choice);
 void buyTicket(int choice,int q);
+#define lineSpace printf("\n\n");
 string userName;
 int passCode;
 int main()
 {
     int choiceMenu,choiceDestination,quantity;
+    
+    lineSpace
+
     cout<<"\t\t\tWelcome to rail Ticket Buying System"<<endl;
+    
+    lineSpace
     
     //Registration Start
     cout<<":: Registration:"<<endl;
     registerAccount();
     //Registration End
-
+    
+    lineSpace
+    
     //Login start
     cout<<":: Login:"<<endl;
     login();
     //Login end
-
+    
+    lineSpace
+    
     //Main Menu
     cout<<":: Menu List:"<<endl;
     cout<<"1) Buy Ticket"<<endl
         <<"2) Exit"<<endl;
     cout<<"Enter Choice: ";
     cin>>choiceMenu;
+    
+    lineSpace
+    
     getOption(choiceMenu);
     //Main Menu End
-
+    
+    lineSpace
+    
     //Buing Ticket
     cout<<"Enter Where you want to go (1/2/3/4/5/6): ";
     cin>>choiceDestination;
@@ -99,6 +114,6 @@ void buyTicket(int choise,int q)
     }
     else
     {
-        cout<<"You Paid Wrong Amount!"<<endl;
+        cout<<"Sorry, You Paid Wrong Amount!"<<endl;
     }
 }
